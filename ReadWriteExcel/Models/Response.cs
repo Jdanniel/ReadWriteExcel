@@ -11,14 +11,17 @@ namespace ReadWriteExcel.Models
 
         public string Msg { get; set; }
 
+        public int Data { get; set; }
+
         //public T Data { get; set; }
 
-        public static Response GetResult(int code, string msg)
+        public static Response GetResult(int code, string msg, int data)
         {
             return new Response
             {
                 Code = code,
-                Msg = msg
+                Msg = msg,
+                Data = data
             };
         }
     }
